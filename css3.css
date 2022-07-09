@@ -1,0 +1,302 @@
+ #border 
+ {
+  height: 200px;
+  width: 200px;
+  background-image: radial-gradient(red , orange , yellow, black,rgb(74, 74, 122),rgb(219, 213, 213) );
+                    /* gradient melingkar */
+  border-radius: 20px;
+  line-height: 200px;
+  text-align: center;
+  box-shadow:20px 15px 10px palevioletred, /* bikin box jadi bersyadw: shdaw kanan,sdw bawah, blurnya, warnanya  */
+             15px 15px 0px 1px rgb(233, 49, 49);  /* ukuran sk dan sb sama dan shawdow 0 akan menghasilkan seperti border margin  */
+  transition: 1s;
+ 
+}
+#cover:hover #border{ /* biar ga macet- macet */
+    margin-left:1050px; /* biar geser ke kanannya */
+    transform: scale(-1), rotate(45deg); /* teanform : namanya(scalanya) */
+    background-color: #ff00de;
+    box-shadow: 20px 15px 10px  #e0eff2, inset 15px 15px 0px 1px rebeccapurple;
+}
+#border1{
+    height: 200px;
+    width: 200px;
+    background-color:rgba(152, 250, 114,0.5 ); /* red green blue, a = alpha / opacitynya 0-1 */
+    border-radius: 50%;
+    line-height: 200px;
+    text-align: center;
+    box-shadow:-10px -8px 10px 3px #99fabe, /* tambah sebelum warna bisa tambah ukuran siae dari shdawnya  */
+                10px  8px 10px 4px  plum,   /* tamabh , buat mutiple shadaw */
+               inset 10px 8px 10px 3px #e799fa,   /* inset buat bayangangan mencorok kedalam */
+              inset -10px -8px 10px 3px #99fabe ;                
+    margin-top: 40px;  /* untuk memberi jarak */
+    transition: 2s;
+}
+#gamacet:hover #border1{
+    transform: rotateX(180deg),scale(1.5);
+    margin-left: 1050px;
+}
+#borderr{
+    height:200px ;
+    width: 200px ;
+    border-radius:50%;
+    margin-top: 40px;
+    background-image: radial-gradient(circle,rgb(236, 82, 211), grey,white, rgb(238, 134, 252), black) ;
+    transition: 2s;
+}
+#borderr:hover{
+    transform: skew(95deg);
+    
+}
+#border2{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(177, 18, 236, 0.5);/* hsla hue= warnanya, saturation, lightness, alpha */
+    border-radius: 0 50% 0 50%;
+    margin-top: 40px;
+    box-shadow:0px 0px 0px 8px  rgb(233, 49, 49),
+               inset 0px 0px 0px 8px  rgb(238, 197, 61),
+                0px 0px 0px 10px  yellow ;
+    transition: 2s;
+}
+#border2:hover{
+    transform: rotate3d(90deg);
+}
+#border3{
+    height: 200px;
+    width: 200px;
+    border-radius: 50% 50%  75% 75%;
+    opacity: 0.3;  /* opacity = tranparasinya */
+    margin-top: 40px;
+    background-image: linear-gradient( 45deg, black 45%,rgb(151, 4, 119) 50%, rgb(255, 38, 74) 45%);
+    /*membuat gradient warna: (derajat/ arah, warna1 mau dipakai berapa persen, warna2,....., warna ke n)*/
+    /* yag arah : to top (dari bawah ke atas) dkk, to top left (dari kiri bawak ke kiri atas) dkk */
+    transition: 2s;
+}
+#border3:hover{
+    transform: translate(165deg), skewX(60deg);
+}
+#border4{
+    height: 200px;
+    width: 200px;
+    background-color:darkorange;
+    border-radius: 50% ;
+    background-image: url(chan.png);
+    background-repeat: no-repeat; /* agar gambar tidak berulang*/
+    background-size: cover; /* untuk menutupi semua */
+    box-shadow:10px 10px 20px cyan ;
+    margin-top: 40px;
+    transition: margin-left 3s, tranform 3s 2s; /* tunggu 1 setik untuk melakukan rotasi dkk 2 s*/
+}
+#gamacet1:hover #border4{
+    margin-left:1050px;
+    transform: rotate(720deg);
+    box-shadow:0px 0px 0px 8px  rgb(233, 49, 49),
+               inset 0px 0px 0px 8px  rgb(238, 197, 61),
+                0px 0px 0px 10px  yellow ;
+}
+#lisa{
+    height: 200px;
+    width: 200px;
+    background-color:darkorange;
+    border-radius: 50% ;
+    background-image: url(lisa.jpg);
+    background-repeat: no-repeat; /* agar gambar tidak berulang*/
+    background-size: cover; /* untuk menutupi semua */
+    box-shadow:10px 10px 20px salmon ;
+    margin-top: 40px; 
+    transition: 2s;      
+}
+#gamacet2:hover #lisa{
+    margin-left: 1050px;
+    transform:rotate(180deg);
+    box-shadow: 0px 0px 2px 8px  rgba(196, 49, 233, 0.479),
+    inset 0px 0px 4px 8px yellow,
+     0px 0px 2px 10px  rgb(255, 253, 255) ;
+           
+           
+}
+.box4{
+        position: relative;
+ }
+.box4-1{
+        position: absolute; left: 70px; top: 0;
+        width: 70px; height: 115px; background: #f00;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+ }
+.box4-2{
+        position: absolute; left: 0; top: 0;
+         width: 70px; height: 115px; background: #f00;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+}
+/* =========================================== TEKS SHADAW ================================================== */
+.teks1 {
+    color: white;
+    text-shadow: 0 0 20px yellow;  /* kanan bawah shadaw color */
+    font-size: larger;
+    font-weight: bold; 
+  }
+
+.teks2 {
+    font-size: larger;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 0 1px 1px white;
+}
+.teks3 {
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 1px 4px 6px #def, 
+                 0px 0px 0px #000, 
+                 1px 4px 6px #def;
+}
+.teks4 {
+    font-weight: normal;
+    color: white;
+    text-shadow: 0 0 10px #fff, 
+                 0 0 20px #fff, 
+                 0 0 30px #fff, 
+                 0 0 40px #ff00de, 
+                 0 0 70px #ff00de, 
+                 0 0 80px #ff00de, 
+                 0 0 100px #ff00de, 
+                 0 0 150px #ff00de;
+                 font-size: larger;
+                 font-weight: bold;
+}
+.teks5 {
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    margin-top: 100px;
+    text-shadow: 0 0 20px #fefcc9, 
+                 10px -10px 30px #feec85,
+                  -20px -20px 40px #ffae34, 
+                  20px -40px 50px #ec760c, 
+                  -20px -60px 60px #cd4606, 
+                  0 -80px 70px #973716, 
+                  10px -90px 80px #451b0e;
+}
+.teks6 {
+    font-size: larger;
+    font-weight: bold;
+      color: white;
+      text-shadow: 0 1px 0 #ccc,
+                    0 2px 0 #c9c9c9,
+                    0 3px 0 #bbb,
+                    0 4px 0 #b9b9b9,
+                    0 5px 0 #aaa,
+                    0 6px 1px rgba(0,0,0,.1),
+                    0 0 5px rgba(0,0,0,.1),
+                    0 1px 3px rgba(0,0,0,.3),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.25),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.15);
+}
+.teks7 {
+    font-size: larger;
+    font-weight: bold;
+      color: #e0eff2;
+      font-style: italic;
+      font-weight: bold;
+      font-family: georgia;
+      text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+}
+.teks8 {
+    font-size: larger;
+    font-weight: bold;
+      color: #202c2d;
+      text-shadow:
+        0 1px #808d93,
+        -1px 0 #cdd2d5,
+        -1px 2px #808d93,
+        -2px 1px #cdd2d5,
+        -2px 3px #808d93,
+        -3px 2px #cdd2d5,
+        -3px 4px #808d93,
+        -4px 3px #cdd2d5,
+        -4px 5px #808d93,
+        -5px 4px #cdd2d5,
+        -5px 6px #808d93,
+        -6px 5px #cdd2d5,
+        -6px 7px #808d93,
+        -7px 6px #cdd2d5,
+        -7px 8px #808d93,
+        -8px 7px #cdd2d5;
+}
+.teks9 {
+    color: #92a5de;
+    font-size: larger;
+    font-weight: bold;
+      text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
+}
+.teks10 {
+    color: #333;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.teks11 {
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    text-shadow: -10px 10px 0px #00e6e6,
+             -20px 20px 0px #01cccc,
+             -30px 30px 0px #00bdbd;
+}
+.teks12 {
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+             0px -5px 35px rgba(255,255,255,0.3);
+}
+   
+/* =========================================== FONT FACE ================================================== */
+#font{
+  font-family: 'Chango', cursive;
+}
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+         url('alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#fontface{
+  font-family: 'alex_brushregular' ; 
+  font-size: larger;
+  font-weight: bolder;
+  color:black;
+  text-shadow: 15px 15px 15px rgb(247, 242, 242);
+  
+}
+
+   
+   
+   
+   
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    /* m1 = Manager(3, 5000000) */
+    
+    
+    
+    
+    
+    
+    
